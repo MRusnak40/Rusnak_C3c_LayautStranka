@@ -1,0 +1,142 @@
+.container{
+    display: "grid";
+    grid-template-areas: 
+    "header header"
+    "sidebar main"
+    "footer footer";
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+
+body {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+    background: rgb(100, 97, 110);
+}
+
+
+.nav
+{
+    
+    height: 50px;
+    width: 100px;
+   
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: auto;
+}
+.main {
+    grid-area: main;
+    background: #8fa6b4;
+    padding: 20px;
+    flex: 2 1 500px;                    /* zabere zbytek prostoru */
+    background-color: #8fa6b4;
+    padding: 20px;
+}
+
+.boxes{
+    display: flex;
+    
+    justify-content: center;
+
+    background-color: rgb(7, 105, 12);
+    padding: 20px;
+    
+
+}
+
+.logo{
+    height: 100px;
+    width: 100px;
+}
+
+.content {
+   display: flex;
+  
+   grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 60vh;
+    justify-content: center;
+    
+
+}
+
+
+.sidebar {
+    grid-area: sidebar;
+    background: #544e6b;
+    padding: 20px;
+    flex: 1 1 300px;
+}
+
+.footer {
+    grid-area: footer;
+    background: #026454;
+    padding: 10px;
+}
+
+.image{
+    height: 50px;
+    width: 50px;
+    padding: 25px;
+}
+.header{
+    grid-area: header;
+    background: rgb(133, 120, 120);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+p{  
+    display: flex;
+    padding: 20px;
+    margin: 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    align-items: flex-start;
+   
+    
+}
+.next{
+display: flex;
+  
+   grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr auto;
+
+}
+.divider{
+    height: 20px;
+    width: 100%;
+    
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .container {
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav {
+        margin-top: 10px;
+    }
+}

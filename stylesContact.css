@@ -1,0 +1,144 @@
+.container{
+    display: "grid";
+    grid-template-areas: 
+    "header header"
+    "sidebar main"
+    "footer footer";
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+
+body {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+    background: rgb(100, 97, 110);
+}
+
+
+.nav
+{
+    
+    height: 50px;
+    width: 100px;
+   
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: auto;
+}
+.main {
+    grid-area: main;
+    background: #8fa6b4;
+    padding: 20px;
+    flex: 4;                    /* zabere zbytek prostoru */
+    background-color: #8fa6b4;
+    padding: 20px;
+}
+
+
+
+.logo{
+    height: 100px;
+    width: 100px;
+}
+
+.title{
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-style: italic;
+    
+}
+.post-header{
+    margin-left: 20px;
+    
+}
+.theBlock{
+    padding: 25px;
+    background-color: rgb(168, 116, 211);
+}
+
+.post {
+  display: flex;
+  flex-direction: row;      /* vedle sebe */
+  flex-wrap: wrap;          /* umožní zalomení */
+  gap: 20px;
+  background-color: rgb(10, 126, 87);
+  padding: 20px;
+}
+
+.post > div {
+  flex: 1 1 500px; /* každý prvek má min. šířku 500px */
+}
+@media (max-width: 600px) {
+  .post > div {
+    flex: 1 1 100%;
+  }
+}
+
+.img
+{
+    border: 3px solid #000000;
+    border-radius: 10px;
+    height: 200px;
+    width: auto;
+
+}
+
+
+
+.footer {
+    grid-area: footer;
+    background: #026454;
+    padding: 10px;
+}
+
+.image{
+    height: 50px;
+    width: 50px;
+    padding: 25px;
+}
+.header{
+    grid-area: header;
+    background: rgb(133, 120, 120);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+p{  
+    display: flex;
+    padding: 20px;
+    margin: 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    align-items: flex-start;
+   
+    
+}
+
+
+@media screen and (max-width: 600px) {
+    .container {
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav {
+        margin-top: 10px;
+    }
+}
